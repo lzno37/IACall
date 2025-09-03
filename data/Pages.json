@@ -1,0 +1,143 @@
+[
+  {
+    "lawoffices": {
+      "EN": {
+        "Badge": "Legal Services & Firms",
+        "title": "Enhance Legal Practice Efficiency with Professional AI Communication ",
+        "description": "We handle intake calls, scheduling, and follow‑ups—so you never miss a potential client.",
+        "image": "/industry/Law/Main.jpg",
+
+        "Box1Title": "Professional Client Intake Process",
+        "Box1Description": "Conduct preliminary client screenings, collect case information, and schedule consultations with appropriate attorneys. Ensure confidentiality while gathering essential details for case evaluation.",
+        "Box1Image": "/industry/Law/1.jpg",
+        "Box2Title": "Intelligent Case Type Routing",
+        "Box2Description": "Automatically categorize inquiries by practice area - personal injury, family law, corporate matters, or criminal defense - and route to specialized attorneys. Optimize resource allocation and improve client satisfaction.",
+        "Box2Image": "/industry/Law/2.jpg",
+        "Box3Title": "Appointment & Deadline Management",
+        "Box3Description": "Schedule client meetings, court appearances, and important deadlines while integrating with your legal practice management software. Send automated reminders for consultations, document submissions, and payment due dates.",
+        "Box3Image": "/industry/Law/3.jpg"
+      },
+      "ES": {
+        "Badge": "Servicios Legales y Bufetes de Abogados",
+        "title": "Mejore la Eficiencia de la Práctica Legal con Comunicación Profesional de IA",
+        "description": "Gestionamos consultas iniciales, programación de citas y seguimientos—para que no pierda ningún cliente potencial.",
+        "image": "/industry/Law/Main.jpg",
+        "Box1Title": "Proceso Profesional de Admisión de Clientes",
+        "Box1Description": "Realice evaluaciones preliminares de clientes, recopile información de casos y programe consultas con abogados apropiados. Asegure confidencialidad mientras reúne detalles esenciales para evaluación de casos.",
+        "Box1Image": "/industry/Law/1.jpg",
+        "Box2Title": "Enrutamiento Inteligente por Tipo de Caso",
+        "Box2Description": "Categorice automáticamente consultas por área de práctica: lesiones personales, derecho familiar, asuntos corporativos o defensa criminal, y dirija a abogados especializados. Optimice la asignación de recursos y mejore la satisfacción del cliente.",
+        "Box2Image": "/industry/Law/2.jpg",
+        "Box3Title": "Gestión de Citas y Plazos",
+        "Box3Description": "Programe reuniones con clientes, comparecencias judiciales y plazos importantes mientras se integra con su software de gestión de práctica legal. Envíe recordatorios automatizados para consultas, presentación de documentos y fechas de vencimiento de pagos.",
+        "Box3Image": "/industry/Law/3.jpg"
+      }
+    }
+  },
+  {
+    "propertymanagement": {
+      "EN": {
+        "Badge": "Property Management",
+        "title": "Streamline Property Operations with Intelligent Communication",
+        "description": "We handle tenant questions, maintenance requests, and leasing inquiries 24/7—cutting response times and boosting satisfaction.",
+        "image": "/industry/Property/Main.jpg",
+        "Box1Title": "24/7 Tenant Support System ",
+        "Box1Description": "Automatically handle common tenant inquiries about lease terms, maintenance procedures, payment methods, and property amenities. Route urgent maintenance requests to appropriate personnel while logging all interactions for follow-up.",
+        "Box1Image": "/industry/Property/1.jpg",
+        "Box2Title": "Automated Maintenance Coordination",
+        "Box2Description": "Schedule maintenance appointments, send contractor notifications, and update tenants on repair progress. Integrate with your property management software to track work orders and ensure timely completion.",
+        "Box2Image": "/industry/Property/2.jpg",
+        "Box3Title": "Prospective Tenant Qualification",
+        "Box3Description": "Pre-screen potential renters by collecting essential information, scheduling property viewings, and answering questions about availability, pricing, and lease terms. Qualify leads before they reach your leasing team.",
+        "Box3Image": "/industry/Property/3.jpg"
+      },
+      "ES": {
+        "Badge": "ADMINISTRADORES DE FINCAS",
+        "title": "Optimice las Operaciones Inmobiliarias con Comunicación Inteligente",
+        "description": "Gestionamos consultas de inquilinos, solicitudes de mantenimiento y consultas de alquiler 24/7—reduciendo tiempos de respuesta y aumentando la satisfacción.",
+        "image": "/industry/Property/Main.jpg",
+
+        "Box1Title": "Sistema de Soporte 24/7 para Inquilinos",
+        "Box1Description": "Maneje automáticamente consultas comunes de inquilinos sobre términos de arrendamiento, procedimientos de mantenimiento, métodos de pago y amenidades de la propiedad. Dirija solicitudes urgentes de mantenimiento al personal apropiado mientras registra todas las interacciones para seguimiento.",
+        "Box1Image": "/industry/Property/1.jpg",
+        "Box2Title": "Coordinación de Mantenimiento Automatizada",
+        "Box2Description": "Programe citas de mantenimiento, envíe notificaciones a contratistas y actualice a los inquilinos sobre el progreso de las reparaciones. Integre con su software de gestión de propiedades para rastrear órdenes de trabajo y garantizar la finalización oportuna.",
+        "Box2Image": "/industry/Property/2.jpg",
+        "Box3Title": "Calificación de Posibles Inquilinos",
+        "Box3Description": "Pre-evalúe arrendatarios potenciales recopilando información esencial, programando visitas a propiedades y respondiendo preguntas sobre disponibilidad, precios y términos de arrendamiento. Califique prospectos antes de que lleguen a su equipo de arrendamiento.",
+        "Box3Image": "/industry/Property/3.jpg"
+      }
+    }
+  },
+  {
+    "healthcare": {
+      "EN": {
+        "Badge": "Health Care",
+        "title": "Revolutionize Patient Care with Intelligent Communication",
+        "description": "We handle appointments, patient follow‑ups, and urgent calls—improving attendance and keeping your team focused on care.",
+        "image": "/industry/Health/Main.jpg",
+        "Box1Title": "Smart Call Classification & Routing",
+        "Box1Description": "Automatically categorize incoming calls and route urgent cases directly to your medical team while handling routine inquiries through AI. Reduce staff workload and ensure critical patients receive immediate attention.",
+        "Box1Image": "/industry/Health/1.jpg",
+        "Box2Title": "Automated Patient Follow-Up System",
+        "Box2Description": "Schedule and conduct follow-up calls at patients' preferred times with seamless integration to your Electronic Health Record (EHR) system. Access complete patient histories and provide personalized care continuity.",
+        "Box2Image": "/industry/Health/2.jpg",
+        "Box3Title": "Never Miss Another Appointment",
+        "Box3Description": "Deploy multi-channel reminder systems via SMS, email, and personalized communication links. Dramatically reduce no-shows and optimize your practice's scheduling efficiency.",
+        "Box3Image": "/industry/Health/3.jpg"
+      },
+      "ES": {
+        "Badge": "Servicios de Salud y Medicina",
+        "title": "Revolucione la Atención al Paciente con Comunicación Inteligente",
+        "description": "Gestionamos citas, seguimientos de pacientes y llamadas urgentes—mejoramos la asistencia y mantenemos a su equipo enfocado en la atención",
+        "image": "/industry/Health/Main.jpg",
+
+        "Box1Title": "Clasificación y Enrutamiento Inteligente de Llamadas",
+        "Box1Description": "Categorice automáticamente las llamadas entrantes y dirija los casos urgentes directamente a su equipo médico mientras maneja consultas rutinarias a través de IA. Reduzca la carga de trabajo del personal y asegúrese de que los pacientes críticos reciban atención inmediata.",
+        "Box1Image": "/industry/Health/1.jpg",
+        "Box2Title": "Sistema Automatizado de Seguimiento de Pacientes",
+        "Box2Description": "Programe y realice llamadas de seguimiento en los horarios preferidos de los pacientes con integración perfecta a su sistema de Historial Clínico Electrónico (HCE). Acceda a historiales completos de pacientes y proporcione continuidad de atención personalizada.",
+        "Box2Image": "/industry/Health/2.jpg",
+        "Box3Title": "Nunca Pierda Otra Cita",
+        "Box3Description": "Implemente sistemas de recordatorio multicanal vía SMS, correo electrónico y enlaces de comunicación personalizados. Reduzca drásticamente las ausencias y optimice la eficiencia de programación de su consulta.",
+        "Box3Image": "/industry/Health/3.jpg"
+      }
+    }
+  },
+  {
+    "restaurant": {
+      "EN": {
+        "Badge": "Restaurants & Hospitality",
+        "title": "Elevate Your Restaurant Operations with AI-Powered Reservations",
+        "description": "We handle 24/7 phone reservations—bookings, cancellations, and guest messages—so your team focuses on the guest experience.",
+        "image": "/industry/Restaurant/Main.jpg",
+
+        "Box1Title": "Seamless Reservation Management",
+        "Box1Description": "Integrate directly with your existing booking platform through API connections, ensuring real-time database updates for every phone reservation. Eliminate double-bookings and streamline your reservation workflow.",
+        "Box1Image": "/industry/Restaurant/1.jpg",
+        "Box2Title": "Intelligent Customer Service",
+        "Box2Description": "Answer frequently asked questions about your menu, hours, special events, and dietary accommodations. Provide complete business information while capturing reservation details with precision.",
+        "Box2Image": "/industry/Restaurant/2.jpg",
+        "Box3Title": "Multilingual & Brand-Authentic Communication",
+        "Box3Description": "Choose from an extensive catalog of voices in multiple languages and accents. Whether you run an Italian trattoria or a French bistro, communicate authentically with your customers in their preferred language.",
+        "Box3Image": "/industry/Restaurant/3.jpg"
+      },
+      "ES": {
+        "Badge": "Restaurantes y Hospitalidad",
+        "title": "Eleve las Operaciones de su Restaurante con Reservas Impulsadas por IA",
+        "description": "Gestionamos las reservas telefónicas 24/7—nuevas reservas, cancelaciones y mensajes—para que su equipo se enfoque en la experiencia del cliente.",
+        "image": "/industry/Restaurant/Main.jpg",
+
+        "Box1Title": "Gestión Perfecta de Reservas",
+        "Box1Description": "Integre directamente con su plataforma de reservas existente a través de conexiones API, asegurando actualizaciones en tiempo real de la base de datos para cada reserva telefónica. Elimine las reservas duplicadas y optimice su flujo de trabajo de reservas.",
+        "Box1Image": "/industry/Restaurant/1.jpg",
+        "Box2Title": "Servicio al Cliente Inteligente",
+        "Box2Description": "Responda preguntas frecuentes sobre su menú, horarios, eventos especiales y opciones dietéticas. Proporcione información completa del negocio mientras captura detalles de reservas con precisión.",
+        "Box2Image": "/industry/Restaurant/2.jpg",
+        "Box3Title": "Comunicación Multilingüe y Auténtica de Marca",
+        "Box3Description": "Elija de un extenso catálogo de voces en múltiples idiomas y acentos. Ya sea que maneje una trattoria italiana o un bistró francés, comuníquese auténticamente con sus clientes en su idioma preferido.",
+        "Box3Image": "/industry/Restaurant/3.jpg"
+      }
+    }
+  }
+]
