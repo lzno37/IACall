@@ -8,57 +8,10 @@ import IconsShow from "./IconsShow";
 import { useLanguage } from "@/hooks/Language";
 import Service24 from "./service24";
 import Dataprot from "./Dataprot";
+import Circles from "./Circles";
+import MsgPings from "./MsgPings";
 
 const Feature = [
-  {
-    EN: {
-      title: "Break Language Barriers",
-      description:
-        "Real Time Translation and Transcription Services. Our AI Agent Ensures Clear Communication Across Languages.",
-    },
-    ES: {
-      title: "Rompe las Barreras del Idioma",
-      description:
-        "Servicios de Traducción y Transcripción en Tiempo Real. Nuestro Agente IA Garantiza Comunicación Clara entre Idiomas.",
-    },
-    span: "col-span-4 max-lg:col-span-1 ",
-    background: <VoiceMarguee />,
-  },
-  {
-    EN: {
-      title: "Your Platform, Your Control",
-      description:
-        "Customize Your Experience with Our AI Agent. Tailor Responses, Set Preferences",
-    },
-    ES: {
-      title: "Tu Plataforma, Tu Control",
-      description:
-        "Personaliza tu Experiencia con Nuestro Agente IA. Adapta Respuestas, Establece Preferencias",
-    },
-    span: "col-span-2 max-lg:col-span-1",
-    background: (
-      <img
-        src="/Camp.png"
-        alt="Your Platform Your Control"
-        className="h-full w-full object-cover p-6 "
-      />
-    ),
-  },
-  {
-    EN: {
-      title: "Streamlined Integrations",
-      description:
-        "Connect Effortlessly With Various Applications and Services.",
-    },
-    ES: {
-      title: "Integraciones Simplificadas",
-      description:
-        "Conéctate sin Esfuerzo con Varias Aplicaciones y Servicios.",
-    },
-    span: "col-span-2 max-lg:col-span-1",
-    background: <IconsShow />,
-  },
-
   {
     EN: {
       title: "24/7 Service",
@@ -68,24 +21,68 @@ const Feature = [
     ES: {
       title: "Servicio 24/7",
       description:
-        "Nunca Pierdas una Llamada. Nuestro Agente IA Está Disponible las 24 Horas para Asistir a tus Clientes en Cualquier Momento y Lugar.",
+        "Nunca pierdas una llamada. Nuestro agente IA está disponible las 24 horas para asistir a tus clientes en cualquier momento.",
     },
     span: "col-span-1 max-lg:col-span-1",
-    background: <Service24 />,
+    background: (
+      <div className="h-60 flex items-start justify-start overflow-hidden">
+        <img
+          src="/service24.png"
+          alt="24/7 Service"
+          className="h-80 w-[13rem] max-lg:object-contain mx-auto  "
+        />
+      </div>
+    ),
   },
   {
     EN: {
-      title: "Bullet Proof Data Protection",
+      title: "Break Language Barriers",
       description:
-        "Real Time Monitoring and Threat Detection. Our AI Agent Ensures Your Data is Always Secure.",
+        "Real Time Translation and Transcription Services. Our AI Agent Ensures Clear Communication Across Languages.",
     },
     ES: {
-      title: "Protección de Datos a Prueba de Balas",
+      title: "Rompe las barreras del idioma",
       description:
-        "Monitoreo en Tiempo Real y Detección de Amenazas. Nuestro Agente IA Garantiza que tus Datos Estén Siempre Seguros.",
+        "Servicios de traducción y transcripción en tiempo real.  Nuestro agente IA garantiza una comunicación clara entre idiomas.",
     },
-    span: "col-span-1 max-lg:col-span-1",
-    background: <Dataprot />,
+    span: "col-span-3 max-lg:col-span-1 ",
+    background: <VoiceMarguee />,
+  },
+  {
+    EN: {
+      title: "Your Platform, Your Control",
+      description:
+        "Customize Your Experience with Our AI Agent. Tailor Responses, Set Preferences",
+    },
+    ES: {
+      title: "Tu plataforma, tu control",
+      description:
+        "Personaliza tu experiencia con nuestro agente IA. Adapta respuestas, establece preferencias.",
+    },
+    span: "col-span-2 max-lg:col-span-1",
+    background: (
+      <div className="flex items-center justify-center overflow-hidden p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl shadow-md my-4 mx-4">
+        <img
+          src="/Camp.png"
+          alt="Your Platform Your Control"
+          className="h-full w-full  rounded-lg shadow-md"
+        />
+      </div>
+    ),
+  },
+  {
+    EN: {
+      title: "Streamlined Integrations",
+      description:
+        "Connect Effortlessly With Various Applications and Services.",
+    },
+    ES: {
+      title: "Integraciones simplificadas",
+      description:
+        "Conéctate sin esfuerzo con varias aplicaciones y servicios.",
+    },
+    span: "col-span-2 max-lg:col-span-1",
+    background: <Circles />,
   },
   {
     EN: {
@@ -94,17 +91,33 @@ const Feature = [
         "Real Time Synchronization with Your Calendar. Our AI Agent Ensures You're Always in Control of Your Schedule.",
     },
     ES: {
-      title: "Gestiona tu Calendario",
+      title: "Gestiona tu calendario",
       description:
-        "Sincronización en Tiempo Real con tu Calendario. Nuestro Agente IA Garantiza que Siempre Tengas Control de tu Horario.",
+        "Sincronización en tiempo real con tu calendario. Nuestro agente IA garantiza que siempre tengas control de tu horario.",
     },
-    span: "col-span-2 max-lg:col-span-1",
+    span: "col-span-3 max-lg:col-span-1",
+    background: <MsgPings />,
+  },
+  {
+    EN: {
+      title: "Bullet Proof Data Protection",
+      description:
+        "Real Time Monitoring and Threat Detection. Our AI Agent Ensures Your Data is Always Secure.",
+    },
+    ES: {
+      title: "Protección de datos a prueba de balas",
+      description:
+        "Monitoreo en tiempo real y detección de amenazas. Nuestro agente IA garantiza que tus datos estén siempre seguros.",
+    },
+    span: "col-span-1 max-lg:col-span-1",
     background: (
-      <img
-        src="/Calender.webp"
-        alt="Manage Your Calendar"
-        className="w-full h-full object-contain "
-      />
+      <div className="flex h-full w-full items-center justify-center overflow-hidden">
+        <img
+          src="/Dataprot.png"
+          alt="Bullet Proof Data Protection"
+          className="h-40 w-60 object-contain"
+        />
+      </div>
     ),
   },
 ];

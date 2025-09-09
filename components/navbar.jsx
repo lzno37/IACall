@@ -36,7 +36,7 @@ const Navbar = () => {
     ES: {
       services: "Otras Soluciones",
       industries: "Industrias",
-      partners: "Socios",
+      partners: "Partners",
       signIn: "Iniciar Sesión",
       tryNow: "Probar Ahora",
       industriesList: {
@@ -87,50 +87,43 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <motion.nav
-      className="fixed top-0 left-0 right-0 z-50"
-      initial={false}
-      animate={{
-        backgroundColor: isScrolled
-          ? "rgba(255, 255, 255, 0.65)"
-          : "rgba(255, 255, 255, 0)",
-        marginLeft: isScrolled ? 16 : 0,
-        marginRight: isScrolled ? 16 : 0,
-        marginTop: isScrolled ? 16 : 0,
-        borderRadius: isScrolled ? 50 : 0,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
-      }}
-      style={{
-        backdropFilter: isScrolled ? "blur(24px) saturate(180%)" : "none",
-        WebkitBackdropFilter: isScrolled ? "blur(24px) saturate(180%)" : "none",
-        boxShadow: isScrolled ? "0 8px 32px 0 rgba(31, 38, 135, 0.18)" : "none",
-        border: isScrolled ? "1px solid rgba(255, 255, 255, 0.18)" : "none",
-      }}
-    >
-      {/* Web Version of Navbar */}
-      <motion.div
-        className="hidden lg:flex items-center justify-between relative"
+    <>
+      <motion.nav
+        className="fixed top-0 left-0 right-0 z-50"
+        initial={false}
         animate={{
-          paddingLeft: isScrolled ? 24 : 32,
-          paddingRight: isScrolled ? 24 : 32,
-          paddingTop: isScrolled ? 12 : 24,
-          paddingBottom: isScrolled ? 12 : 24,
+          backgroundColor: isScrolled
+            ? "rgba(255, 255, 255, 0.65)"
+            : "rgba(255, 255, 255, 0)",
+          marginLeft: isScrolled ? 16 : 0,
+          marginRight: isScrolled ? 16 : 0,
+          marginTop: isScrolled ? 16 : 0,
+          borderRadius: isScrolled ? 50 : 0,
         }}
         transition={{
           type: "spring",
           stiffness: 300,
           damping: 30,
         }}
+        style={{
+          backdropFilter: isScrolled ? "blur(24px) saturate(180%)" : "none",
+          WebkitBackdropFilter: isScrolled
+            ? "blur(24px) saturate(180%)"
+            : "none",
+          boxShadow: isScrolled
+            ? "0 8px 32px 0 rgba(31, 38, 135, 0.18)"
+            : "none",
+          border: isScrolled ? "1px solid rgba(255, 255, 255, 0.18)" : "none",
+        }}
       >
-        {/* Pages */}
+        {/* Web Version of Navbar */}
         <motion.div
-          className="flex gap-2 items-center"
+          className="hidden lg:flex items-center justify-between relative"
           animate={{
-            gap: isScrolled ? 8 : 16,
+            paddingLeft: isScrolled ? 24 : 32,
+            paddingRight: isScrolled ? 24 : 32,
+            paddingTop: isScrolled ? 12 : 24,
+            paddingBottom: isScrolled ? 12 : 24,
           }}
           transition={{
             type: "spring",
@@ -138,15 +131,11 @@ const Navbar = () => {
             damping: 30,
           }}
         >
-          <motion.a
-            href="/automations"
-            className="flex gap-2 items-center rounded-full border border-gray-200 text-black font-medium group"
+          {/* Pages */}
+          <motion.div
+            className="flex gap-2 items-center"
             animate={{
-              paddingLeft: isScrolled ? 12 : 16,
-              paddingRight: isScrolled ? 12 : 16,
-              paddingTop: isScrolled ? 6 : 8,
-              paddingBottom: isScrolled ? 6 : 8,
-              fontSize: isScrolled ? 14 : 16,
+              gap: isScrolled ? 8 : 16,
             }}
             transition={{
               type: "spring",
@@ -154,20 +143,8 @@ const Navbar = () => {
               damping: 30,
             }}
           >
-            {content[currentLanguage].services}
-            <Binoculars
-              size={isScrolled ? 10 : 12}
-              className="transition-transform duration-200  group-hover:translate-y-0.5"
-            />
-          </motion.a>
-
-          {/* Industries Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setIsIndustriesOpen(true)}
-            onMouseLeave={() => setIsIndustriesOpen(false)}
-          >
-            <motion.button
+            <motion.a
+              href="/automations"
               className="flex gap-2 items-center rounded-full border border-gray-200 text-black font-medium group"
               animate={{
                 paddingLeft: isScrolled ? 12 : 16,
@@ -182,51 +159,120 @@ const Navbar = () => {
                 damping: 30,
               }}
             >
-              {content[currentLanguage].industries}
-              <ChevronDown
+              {content[currentLanguage].services}
+              <Binoculars
                 size={isScrolled ? 10 : 12}
-                className={`transition-transform duration-200 ${
-                  isIndustriesOpen ? "rotate-180" : ""
-                }`}
+                className="transition-transform duration-200  group-hover:translate-y-0.5"
               />
-            </motion.button>
+            </motion.a>
 
-            <AnimatePresence>
-              {isIndustriesOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-full mt-2 left-0 w-96 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 shadow-lg p-6 z-50"
-                >
-                  <div className="grid grid-cols-2 gap-4">
-                    {Object.entries(
-                      content[currentLanguage].industriesList
-                    ).map(([key, value]) => (
-                      <a
-                        key={key}
-                        href={`/${key}`}
-                        className="px-3 py-2 text-sm col-span-1 text-gray-700 hover:bg-gray-100/50 rounded-lg transition-colors"
-                      >
-                        {value}
-                      </a>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+            {/* Industries Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsIndustriesOpen(true)}
+              onMouseLeave={() => setIsIndustriesOpen(false)}
+            >
+              <motion.button
+                className="flex gap-2 items-center rounded-full border border-gray-200 text-black font-medium group"
+                animate={{
+                  paddingLeft: isScrolled ? 12 : 16,
+                  paddingRight: isScrolled ? 12 : 16,
+                  paddingTop: isScrolled ? 6 : 8,
+                  paddingBottom: isScrolled ? 6 : 8,
+                  fontSize: isScrolled ? 14 : 16,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 30,
+                }}
+              >
+                {content[currentLanguage].industries}
+                <ChevronDown
+                  size={isScrolled ? 10 : 12}
+                  className={`transition-transform duration-200 ${
+                    isIndustriesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </motion.button>
 
-          <motion.a
-            href="/partners"
-            className="flex gap-2 items-center rounded-full border border-gray-200 text-black font-medium group"
+              <AnimatePresence>
+                {isIndustriesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full mt-2 left-0 w-96 bg-white/90 backdrop-blur-lg rounded-2xl border border-gray-200 shadow-lg p-6 z-50"
+                  >
+                    <div className="grid grid-cols-2 gap-4">
+                      {Object.entries(
+                        content[currentLanguage].industriesList
+                      ).map(([key, value]) => (
+                        <a
+                          key={key}
+                          href={`/${key}`}
+                          className="px-3 py-2 text-sm col-span-1 text-gray-700 hover:bg-gray-100/50 rounded-lg transition-colors"
+                        >
+                          {value}
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <motion.a
+              href="/partners"
+              className="flex gap-2 items-center rounded-full border border-gray-200 text-black font-medium group"
+              animate={{
+                paddingLeft: isScrolled ? 12 : 16,
+                paddingRight: isScrolled ? 12 : 16,
+                paddingTop: isScrolled ? 6 : 8,
+                paddingBottom: isScrolled ? 6 : 8,
+                fontSize: isScrolled ? 14 : 16,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              {content[currentLanguage].partners}
+              <CornerDownRight
+                size={isScrolled ? 10 : 12}
+                className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+              />
+            </motion.a>
+          </motion.div>
+
+          {/* Logo */}
+          <motion.div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center">
+            <motion.a
+              href="/"
+              className="text-black tracking-tight"
+              animate={{}}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              <Image
+                src="/Logo.png"
+                alt="Aiphier Logo"
+                width={130}
+                height={40}
+              />
+            </motion.a>
+          </motion.div>
+
+          {/* Actions */}
+          <motion.div
+            className="flex gap-2 items-center"
             animate={{
-              paddingLeft: isScrolled ? 12 : 16,
-              paddingRight: isScrolled ? 12 : 16,
-              paddingTop: isScrolled ? 6 : 8,
-              paddingBottom: isScrolled ? 6 : 8,
-              fontSize: isScrolled ? 14 : 16,
+              gap: isScrolled ? 8 : 16,
             }}
             transition={{
               type: "spring",
@@ -234,19 +280,81 @@ const Navbar = () => {
               damping: 30,
             }}
           >
-            {content[currentLanguage].partners}
-            <CornerDownRight
-              size={isScrolled ? 10 : 12}
-              className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
-            />
-          </motion.a>
+            <motion.button
+              onClick={toggleLanguage}
+              className="rounded-full border border-gray-200 text-black flex items-center gap-2 hover:bg-gray-50 transition-colors"
+              animate={{
+                paddingLeft: isScrolled ? 8 : 10,
+                paddingRight: isScrolled ? 8 : 10,
+                paddingTop: isScrolled ? 6 : 8,
+                paddingBottom: isScrolled ? 6 : 8,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              <Languages size={isScrolled ? 14 : 16} />
+              <span className="text-sm font-medium">{currentLanguage}</span>
+            </motion.button>
+            <motion.a
+              href="https://cpanel.iacall.es/en/auth/login"
+              className="rounded-full border border-gray-200 text-black font-medium"
+              animate={{
+                paddingLeft: isScrolled ? 12 : 16,
+                paddingRight: isScrolled ? 12 : 16,
+                paddingTop: isScrolled ? 6 : 8,
+                paddingBottom: isScrolled ? 6 : 8,
+                fontSize: isScrolled ? 14 : 16,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              {content[currentLanguage].signIn}
+            </motion.a>
+            <motion.a
+              href="/contact"
+              className="rounded-full bg-black text-white font-medium"
+              animate={{
+                paddingLeft: isScrolled ? 16 : 24,
+                paddingRight: isScrolled ? 16 : 24,
+                paddingTop: isScrolled ? 6 : 10,
+                paddingBottom: isScrolled ? 6 : 10,
+                fontSize: isScrolled ? 14 : 16,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              {content[currentLanguage].tryNow}
+            </motion.a>
+          </motion.div>
         </motion.div>
 
-        {/* Logo */}
-        <motion.div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center">
+        {/* Mobile Version */}
+        <motion.div
+          className="lg:hidden flex items-center justify-between"
+          animate={{
+            paddingLeft: isScrolled ? 16 : 24,
+            paddingRight: isScrolled ? 16 : 24,
+            paddingTop: isScrolled ? 12 : 16,
+            paddingBottom: isScrolled ? 12 : 16,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 30,
+          }}
+        >
           <motion.a
             href="/"
-            className="text-black tracking-tight"
+            className="font-bold text-black tracking-tight"
             animate={{}}
             transition={{
               type: "spring",
@@ -254,157 +362,60 @@ const Navbar = () => {
               damping: 30,
             }}
           >
-            <Image src="/Logo.png" alt="Aiphier Logo" width={130} height={40} />
+            <Image src="/Logo.png" alt="Aiphier Logo" width={100} height={40} />
           </motion.a>
+          <motion.div
+            className="flex items-center"
+            animate={{
+              gap: isScrolled ? 8 : 12,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+            }}
+          >
+            <motion.button
+              onClick={toggleLanguage}
+              className="rounded-full border border-gray-200 text-gray-700 flex items-center gap-1 hover:bg-gray-50 transition-colors"
+              animate={{
+                paddingLeft: isScrolled ? 6 : 8,
+                paddingRight: isScrolled ? 6 : 8,
+                paddingTop: isScrolled ? 6 : 8,
+                paddingBottom: isScrolled ? 6 : 8,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              <Languages size={isScrolled ? 12 : 14} />
+              <span className="text-xs font-medium">{currentLanguage}</span>
+            </motion.button>
+            <motion.button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="rounded-full bg-black text-white font-medium"
+              animate={{
+                paddingLeft: isScrolled ? 12 : 16,
+                paddingRight: isScrolled ? 12 : 16,
+                paddingTop: isScrolled ? 6 : 8,
+                paddingBottom: isScrolled ? 6 : 8,
+                fontSize: isScrolled ? 12 : 14,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+            >
+              <Menu size={isScrolled ? 14 : 16} />
+            </motion.button>
+          </motion.div>
         </motion.div>
 
-        {/* Actions */}
-        <motion.div
-          className="flex gap-2 items-center"
-          animate={{
-            gap: isScrolled ? 8 : 16,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 30,
-          }}
-        >
-          <motion.button
-            onClick={toggleLanguage}
-            className="rounded-full border border-gray-200 text-black flex items-center gap-2 hover:bg-gray-50 transition-colors"
-            animate={{
-              paddingLeft: isScrolled ? 8 : 10,
-              paddingRight: isScrolled ? 8 : 10,
-              paddingTop: isScrolled ? 6 : 8,
-              paddingBottom: isScrolled ? 6 : 8,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 30,
-            }}
-          >
-            <Languages size={isScrolled ? 14 : 16} />
-            <span className="text-sm font-medium">{currentLanguage}</span>
-          </motion.button>
-          <motion.a
-            href="https://cpanel.iacall.es/en/auth/login"
-            className="rounded-full border border-gray-200 text-black font-medium"
-            animate={{
-              paddingLeft: isScrolled ? 12 : 16,
-              paddingRight: isScrolled ? 12 : 16,
-              paddingTop: isScrolled ? 6 : 8,
-              paddingBottom: isScrolled ? 6 : 8,
-              fontSize: isScrolled ? 14 : 16,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 30,
-            }}
-          >
-            {content[currentLanguage].signIn}
-          </motion.a>
-          <motion.a
-            href="/contact"
-            className="rounded-full bg-black text-white font-medium"
-            animate={{
-              paddingLeft: isScrolled ? 16 : 24,
-              paddingRight: isScrolled ? 16 : 24,
-              paddingTop: isScrolled ? 6 : 10,
-              paddingBottom: isScrolled ? 6 : 10,
-              fontSize: isScrolled ? 14 : 16,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 30,
-            }}
-          >
-            {content[currentLanguage].tryNow}
-          </motion.a>
-        </motion.div>
-      </motion.div>
-
-      {/* Mobile Version */}
-      <motion.div
-        className="lg:hidden flex items-center justify-between"
-        animate={{
-          paddingLeft: isScrolled ? 16 : 24,
-          paddingRight: isScrolled ? 16 : 24,
-          paddingTop: isScrolled ? 12 : 16,
-          paddingBottom: isScrolled ? 12 : 16,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 300,
-          damping: 30,
-        }}
-      >
-        <motion.a
-          href="/"
-          className="font-bold text-black tracking-tight"
-          animate={{}}
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 30,
-          }}
-        >
-          <Image src="/Logo.png" alt="Aiphier Logo" width={100} height={40} />
-        </motion.a>
-        <motion.div
-          className="flex items-center"
-          animate={{
-            gap: isScrolled ? 8 : 12,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 30,
-          }}
-        >
-          <motion.button
-            onClick={toggleLanguage}
-            className="rounded-full border border-gray-200 text-gray-700 flex items-center gap-1 hover:bg-gray-50 transition-colors"
-            animate={{
-              paddingLeft: isScrolled ? 6 : 8,
-              paddingRight: isScrolled ? 6 : 8,
-              paddingTop: isScrolled ? 6 : 8,
-              paddingBottom: isScrolled ? 6 : 8,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 30,
-            }}
-          >
-            <Languages size={isScrolled ? 12 : 14} />
-            <span className="text-xs font-medium">{currentLanguage}</span>
-          </motion.button>
-          <motion.button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="rounded-full bg-black text-white font-medium"
-            animate={{
-              paddingLeft: isScrolled ? 12 : 16,
-              paddingRight: isScrolled ? 12 : 16,
-              paddingTop: isScrolled ? 6 : 8,
-              paddingBottom: isScrolled ? 6 : 8,
-              fontSize: isScrolled ? 12 : 14,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 30,
-            }}
-          >
-            <Menu size={isScrolled ? 14 : 16} />
-          </motion.button>
-        </motion.div>
-      </motion.div>
-
-      {/* Mobile Menu Overlay */}
+        {/* Mobile Menu Overlay */}
+      </motion.nav>
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -520,7 +531,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </>
   );
 };
 

@@ -7,14 +7,14 @@ import { useLanguage } from "@/hooks/Language";
 const Feature = [
   {
     EN: {
-      title: "Custom Ai Agent Development",
+      title: "Custom AI Agent Development",
       description:
-        "We develop custom AI agents that integrate seamlessly with your tools",
+        "We develop custom AI agents that integrate seamlessly with your tools.",
     },
     ES: {
       title: "Desarrollo de agentes de IA personalizados",
       description:
-        "Desarrollamos agentes de IA personalizados que se integran perfectamente con tus herramientas.",
+        "Desarrollamos agentes de IA personalizados que se integran perfectamente con sus herramientas.",
     },
     span: "col-span-1 max-lg:col-span-1",
   },
@@ -25,9 +25,9 @@ const Feature = [
         "Boost efficiency across teams with smart automation Build intelligent workflows that automate multi-step processes across tools and platforms",
     },
     ES: {
-      title: "Rompe las Barreras del Idioma",
+      title: "Flujos de trabajo automatizados",
       description:
-        "Aumenta la eficiencia en los equipos con automatización inteligente. Crea flujos de trabajo inteligentes que automaticen procesos de múltiples pasos entre herramientas y plataformas.",
+        "Aumente la eficiencia en todos los equipos con la automatización inteligente. Cree flujos de trabajo inteligentes que automaticen procesos de varios pasos en todas las herramientas y plataformas.",
     },
     span: "col-span-2 max-lg:col-span-1 ",
   },
@@ -38,9 +38,9 @@ const Feature = [
         "Make smarter decisions with live data insights Tap into real-time data",
     },
     ES: {
-      title: "Tu Plataforma, Tu Control",
+      title: "Inteligencia en tiempo real",
       description:
-        "Toma decisiones más inteligentes con información de datos en vivo. Accede a datos en tiempo real.",
+        "Tome decisiones más inteligentes con información de datos en vivo. Aproveche los datos en tiempo real.",
     },
     span: "col-span-1 max-lg:col-span-1",
   },
@@ -51,22 +51,22 @@ const Feature = [
         "We automate your manual workflows, saving you time, energy and resources.",
     },
     ES: {
-      title: "Integraciones Simplificadas",
+      title: "Automatiza tareas repetitivas",
       description:
-        "Te ayudamos a optimizar las operaciones internas automatizando flujos de trabajo manuales.",
+        "Automatizamos sus flujos de trabajo manuales, ahorrándole tiempo, energía y recursos.",
     },
     span: "col-span-1 max-lg:col-span-1",
   },
   {
     EN: {
-      title: "Ai Strategy Consulting",
+      title: "AI Strategy Consulting",
       description:
         "Get expert guidance to implement AI solutions that drive business growth",
     },
     ES: {
-      title: "Gestiona tu Calendario",
+      title: "Consultoría de estrategia de IA",
       description:
-        "Obtén orientación experta para implementar soluciones de IA que impulsen el crecimiento empresarial",
+        "Obtenga orientación experta para implementar soluciones de IA que impulsen el crecimiento empresarial.",
     },
     span: "col-span-1 max-lg:col-span-1",
   },
@@ -92,9 +92,7 @@ const AutoFea = () => {
   const { currentLanguage } = useLanguage();
 
   return (
-    <section
-      className="flex flex-col p-16 max-lg:p-8 max-md:p-4 bg-white font-sans max-w-screen-2xl mx-auto"
-    >
+    <section className="flex flex-col p-16 max-lg:p-8 max-md:p-4 bg-white font-sans max-w-screen-2xl mx-auto">
       {/* Badge Section */}
       <motion.div
         className="flex gap-2 items-center justify-center mb-8"

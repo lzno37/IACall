@@ -11,7 +11,7 @@ const Comparison = () => {
   const content = {
     EN: {
       badge: "Comparison",
-      title: "Why Choose Aiphier?",
+      title: "Why Choose IACall?",
       desc: "See how we compare against others in performance/growth",
       p1: "Full customization and data security",
       p2: "Real-time, AI-powered analytics",
@@ -26,7 +26,7 @@ const Comparison = () => {
     },
     ES: {
       badge: "Comparacion",
-      title: "¿Por qué elegir Aiphier?",
+      title: "¿Por qué elegir IACall?",
       desc: "Vea en que nos diferenciamos",
       p1: "Personalización completa y seguridad de datos",
       p2: "Análisis en tiempo real impulsados por IA",
