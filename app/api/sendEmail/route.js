@@ -16,13 +16,16 @@ export async function POST(req) {
 
     // 2. Define mail options
     const mailOptions = {
-      from: email,
+      from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER, // your email to receive messages
       subject: `New message from ${name}`,
-      message: { message: more || "no Message Entered" },
-      phone: { phone: phone },
-      company: { company: company },
-      email: { email: email },
+      text: `
+        Name: ${name}
+        Company: ${company || "N/A"}
+        Email: ${email}
+        Phone: ${phone}
+        More Info: ${more || "N/A"}
+      `,
     };
 
     // 3. Send email
