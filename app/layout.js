@@ -14,8 +14,9 @@ const ManRopeN = Manrope({
 });
 
 export const metadata = {
-  title: "IACall",
-  description: "IACall - Voice Calling",
+  title: "Atención al cliente 24/7 con agentes de IA | IACall",
+  description:
+    "Nunca pierdas una llamada. Agentes de voz IA a medida 24/7 con analíticas y notificaciones en tiempo real, integraciones y seguridad",
 };
 
 export default function RootLayout({ children }) {

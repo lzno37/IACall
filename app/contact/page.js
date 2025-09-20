@@ -3,6 +3,12 @@ import React, { useState } from "react";
 import { useLanguage } from "@/hooks/Language";
 import { motion } from "framer-motion";
 
+export const metadata = {
+  title: "Contacto | IACall",
+  description:
+    "¿Dudas o quieres ver IACall en acción? Agenda una demo gratuita o escríbenos. Te ayudamos a activar agentes de IA 24/7 para impulsar tu negocio.",
+};
+
 export default function Contact() {
   const { currentLanguage } = useLanguage();
   const [formData, setFormData] = useState({

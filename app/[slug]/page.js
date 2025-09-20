@@ -14,8 +14,24 @@ export async function generateStaticParams() {
   return industries;
 }
 
-export default function IndustryPage({ params }) {
+export function generateMetadata({ params }) {
   const { slug } = params;
+
+  const industryData = pagesData.find((item) => {
+    const industryKey = Object.keys(item)[0];
+    return industryKey.toLowerCase() === slug;
+  });
+  const industryKey = Object.keys(industryData)[0];
+  const data = industryData[industryKey];
+
+  return {
+    title: data.metaTitle,
+    description: data.metaDesc,
+  };
+}
+
+export default async function IndustryPage({ params }) {
+  const { slug } = await params;
 
   const industryData = pagesData.find((item) => {
     const industryKey = Object.keys(item)[0];
