@@ -6,7 +6,7 @@ const Circles = () => {
     <div className="relative flex h-[345px] w-full flex-col items-center justify-center  z-[-2] overflow-hidden px-4 md:px-8">
       <OrbitingCircles radius={1} iconSize={40} duration={0}>
         <img
-          src="/favicon.png"
+          src="/circle.png"
           alt="HubspotLogo"
           className="rounded-full filter brightness-0 opacity-100"
         />
